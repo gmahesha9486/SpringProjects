@@ -1,0 +1,11 @@
+Spring mvc demo project
+
+go to the folder location in command prompt/terminal. 
+execute below line.
+
+mvn jetty:run
+
+http://localhost:8888/springMVCDemo/myResources/images/test1.jpg
+
+http://localhost:8888/springMVCDemo/getQuote
+http://localhost:8888/springMVCDemo/createAccount
