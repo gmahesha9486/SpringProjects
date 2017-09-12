@@ -1,0 +1,28 @@
+=========Core Java query=========
+
+design pattern
+
+
+========= Spring query=========
+
+dependency injection. what is the difference internally
+
+architecture
+major changes in each spring version.
+
+Spring bean life cycle
+Spring boot
+
+
+========= Hibernate query=========
+
+architecture
+caching mechanism
+
+Hibernate session is not closed. what will happen?
+simultaneous insertion to hibernate. which is inserted first.
+
+===========================================================
+	Info.
+	
+Java 7 Concurrency Cookbook	
