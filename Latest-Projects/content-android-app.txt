@@ -1,0 +1,12 @@
+
+Mutual Fund
+	SIP
+	Tax savings scheme
+	General Info. (Open ended, close)
+Insurance
+	- Term Insurance
+	- Health insurance
+	
+Trade
+	-Equity
+	-Futures & Options
