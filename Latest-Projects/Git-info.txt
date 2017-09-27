@@ -1,0 +1,9 @@
+git add .
+
+git commit -m "new projects"
+
+git push origin master
+
+-------------------
+
+git clone https://github.com/gmahesha9486/MyRepository.git
