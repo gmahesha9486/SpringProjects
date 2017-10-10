@@ -217,3 +217,68 @@ It is used to map web requests onto specific handler classes and/or handler meth
 
 
 @RequestBody
+
+
+Rest info.
+
+@SpringBootApplication(scanBasePackages="com.mahesh.test")
+public class RestAPIApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SpringApplication.run(RestAPIApp.class, args); }}
+		
+@RestController
+public class EmployeeController {
+
+		@Autowired
+		private EmployeeService service;
+		
+		@RequestMapping("/employees/")
+		public List<Employee> getEmployeeList(){
+			
+				return service.getAllEmployee();
+		}
+		
+		@RequestMapping("employees/{empid}")
+		public Employee getEmployee(@PathVariable("empid") int eid) {
+			
+			return service.getEmployee(eid);
+		}
+		
+		@RequestMapping(method=RequestMethod.POST,value="/addEmployee")
+		public ResponseEntity<?> addEmployee(@RequestBody Employee emp, UriComponentsBuilder ucBuilder) {
+			
+			service.addEmployee(emp);
+			
+			 HttpHeaders headers = new HttpHeaders();
+		     headers.setLocation(ucBuilder.path("/employees/{empid}").buildAndExpand(emp.getEid()).toUri());
+		     return new ResponseEntity<String>(headers, HttpStatus.CREATED);
+			
+		}
+}		
+----------------------		
+
+
+
+List of RESTful APIs
+WSDL
+WADL
+CloudRail
+API Blueprint
+I/O Docs
+Apache Avro
+
+--------------------------------------
+
+connector view in rest
+Deploying a database to a server
+Understanding cross-origin resource sharing
+creating interfaces for utilizing the rest api
+OAuth secure validation
+Role based authorization
+Securing an application by using OpenID Connect
+Cache mechanism in REST
+Create an OData Controller
+Tracing in Web api
+Using rest API in Node.js
