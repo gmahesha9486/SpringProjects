@@ -1,0 +1,38 @@
+
+Main class should have the annotation @SpringBootApplication
+
+@SpringBootApplication
+public class CourseApiApp { 
+	............
+}
+
+--------
+start the main application. create a servlet container and host the application in that container.
+SpringApplication.run(CourseApiApp.class, args);
+
+-----------
+
+what this line does ?
+SpringApplication.run(CourseApiApp.class, args);
+
+Sets up default configuration  
+starts spring application context : It's a container for all your code that runs on application server.
+performs class path scan : looking for stereotype annotations etc...
+starts tomcat server
+
+=====================
+
+If you want any class to make rest controller, use annotation
+@RestController
+
+In this class you can have methods which maps to url request.
+
+@RequestMapping("/hello")
+		public String sayhi() { }
+
+Note: By default the @RequestMapping annotation maps to all http methods.
+
+========================
+
+
+
