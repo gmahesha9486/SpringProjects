@@ -140,6 +140,11 @@ Method injection
 Proxy scoped bean
 another way to solve injecting a narrower scoped bean into wider scoped bean problem
 
+@Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE,
+           proxyMode = ScopedProxyMode.TARGET_CLASS)
+
+
+
 http://stackoverflow.com/questions/14371335/spring-scoped-proxy-bean
 http://www.logicbig.com/tutorials/spring-framework/spring-core/scoped-proxy/
 
